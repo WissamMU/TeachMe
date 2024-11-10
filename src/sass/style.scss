@@ -1,0 +1,35 @@
+@use "./_variable.scss" as v; 
+@use "./carouselHome.scss" as carouselHome; 
+
+@font-face {
+    font-family: "Rubik-Regular";
+    src: url(../fonts/Rubik-Regular.ttf);
+}
+
+body {
+    font-family: "Rubik-Regular", 'Cambria, Cochin, Georgia, Times, Times New Roman, serif' !important;
+}
+
+.navbar{
+    background-color: v.$main-color !important;
+    font-size: 20px  ;
+
+    .nav-img{
+        width: 50px;
+    }
+    .navbar-brand{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .nav-item{
+        a{
+            border-radius: 10px;
+            &:hover{
+                background-color: v.$secondary-color;
+            }
+        }
+        a.active{
+            background-color: v.$secondary-color;
+        }
+    }
+}

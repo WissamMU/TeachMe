@@ -1,0 +1,10 @@
+@use "./_variable.scss" as v; // Import variables using @use
+
+.home-carousel{
+    .carousel-inner{
+        .carousel-item{
+            height: 600px;
+            object-fit: cover;
+        }
+    }
+}
