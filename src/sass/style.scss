@@ -1,5 +1,5 @@
-@use "./_variable.scss" as v; 
-@use "./carouselHome.scss" as carouselHome; 
+@use "./_variable.scss" as v;
+@use "./carouselHome.scss" as carouselHome;
 
 @font-face {
     font-family: "Rubik-Regular";
@@ -10,26 +10,98 @@ body {
     font-family: "Rubik-Regular", 'Cambria, Cochin, Georgia, Times, Times New Roman, serif' !important;
 }
 
-.navbar{
-    background-color: v.$main-color !important;
-    font-size: 20px  ;
 
-    .nav-img{
+.navbar {
+    background-color: v.$main-color ;
+    font-size: 20px;
+
+    .nav-img {
         width: 50px;
     }
-    .navbar-brand{
+
+    .navbar-brand {
         font-size: 30px;
         font-weight: bold;
     }
-    .nav-item{
-        a{
+
+    .nav-item {
+        a {
+            color: v.$text-color-1;
+
             border-radius: 10px;
-            &:hover{
+
+            &:hover {
                 background-color: v.$secondary-color;
+                color: v.$text-color-2;
             }
         }
-        a.active{
+
+        a.active {
+            color: v.$text-color-2;
             background-color: v.$secondary-color;
+        }
+    }
+}
+
+.noTransparent{
+    background-color: rgba($color: v.$main-color, $alpha: 0.5) !important;
+}
+
+// activity
+section.activity {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    text-align: center;
+    background-color: rgba($color: v.$main-color, $alpha: 0.3);
+
+    .title {
+        padding: 10px 25px;
+        justify-content: center;
+        background-color: v.$main-color;
+        border-radius: 10px;
+        color: v.$text-color-2;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        height: 100%;
+
+        .card-icon {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            background-color: v.$main-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i,
+            svg {
+                font-size: 80px;
+            }
+        }
+
+        .card-body {
+            .card-title {
+                font-size: xx-large;
+                font-weight: bold;
+            }
+
+            .card-text {
+                font-size: large;
+                padding: 0 10px;
+                color: v.$text-color-1;
+                font-weight: 500;
+            }
+
         }
     }
 }

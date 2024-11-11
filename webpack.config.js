@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require('autoprefixer');
+const webpack = require('webpack');
+
 const path = require('path');
 
 module.exports = {
@@ -12,7 +14,7 @@ module.exports = {
 
     module: {
         rules: [
-            
+
             {
                 test: /\.(sass|css|scss)$/,
                 use: [
@@ -54,17 +56,18 @@ module.exports = {
                 generator: {
                     filename: "./fonts/[name][ext]",
                 },
-            },            {
-                test: require.resolve("jquery"),
-                loader: "expose-loader",
-                options: {
-                    exposes: ["$", "jQuery"],
-                },
             },
-            
+            // {
+            //     test: require.resolve("jquery"),
+            //     loader: "expose-loader",
+            //     options: {
+            //         exposes: ["$", "jQuery"],
+            //     },
+            // },
+
         ],
     },
-    
+
 
     devServer: {
         static: {
@@ -82,7 +85,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/style.css",
         }),
-
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+          }),
 
         new HtmlWebpackPlugin({
             template: './src/index.html',

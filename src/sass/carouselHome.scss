@@ -3,8 +3,33 @@
 .home-carousel{
     .carousel-inner{
         .carousel-item{
-            height: 600px;
+            max-height: 600px;
             object-fit: cover;
+
         }
     }
+    
+.welcome {
+    background-color: rgba($color: v.$main-color, $alpha: 0.9);
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: v.$text-color-2;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
 }
