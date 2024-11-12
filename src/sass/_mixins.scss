@@ -1,0 +1,31 @@
+@use './variable' as v;
+
+@mixin cardTitle($fontSize1,$fontColor){
+    font-weight: bold;
+
+    font-size: $fontSize1;
+    color: $fontColor;
+}
+
+@mixin cardText($fontSize2,$fontWeight){
+    padding: 0 10px;
+    color: v.$text-color-1 ;
+
+    font-size: $fontSize2;
+    font-weight: $fontWeight;
+}
+
+@mixin card($fontSize1,$fontColor,$fontSize2,$fontWeight){
+    .card-title{
+        @include cardTitle($fontSize1,$fontColor)
+    }
+    .card-text{
+        @include cardText($fontSize2,$fontWeight);
+    }
+}
+
+@mixin sectionColor($opcity){
+    background-color: rgba($color: v.$main-color, $alpha: $opcity);
+    text-align: center;
+    padding: 50px 0;
+}

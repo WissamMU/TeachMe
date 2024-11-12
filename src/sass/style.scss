@@ -1,5 +1,5 @@
 @use "./_variable.scss" as v;
-@use "./carouselHome.scss" as carouselHome;
+@use './mixins' as *;
 
 @font-face {
     font-family: "Rubik-Regular";
@@ -10,7 +10,35 @@ body {
     font-family: "Rubik-Regular", 'Cambria, Cochin, Georgia, Times, Times New Roman, serif' !important;
 }
 
+// used frequently
+// titles
+h1.title {
+    padding: 10px 25px;
+    justify-content: center;
+    background-color: v.$main-color;
+    border-radius: 10px;
+    color: v.$text-color-2;
+}
 
+// section and cards
+section {
+
+    .container,
+    .container-lg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+// navbar
 .navbar {
     background-color: v.$main-color ;
     font-size: 20px;
@@ -43,36 +71,56 @@ body {
     }
 }
 
-.noTransparent{
+.noTransparent {
     background-color: rgba($color: v.$main-color, $alpha: 0.5) !important;
 }
 
-// activity
-section.activity {
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
+// home carousel
+.home-carousel {
+    margin-top: 65px;
+    ;
+
+    .carousel-inner {
+        .carousel-item {
+            max-height: 600px;
+            object-fit: cover;
+
+        }
     }
 
-    text-align: center;
-    background-color: rgba($color: v.$main-color, $alpha: 0.3);
-
-    .title {
-        padding: 10px 25px;
-        justify-content: center;
-        background-color: v.$main-color;
-        border-radius: 10px;
+    .welcome {
+        background-color: rgba($color: v.$main-color, $alpha: 0.9);
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
         color: v.$text-color-2;
+        z-index: 1;
+        padding: 10px;
+        border-radius: 10px;
+        width: 80%;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
     }
+}
+
+// activity
+section#activity {
+    @include sectionColor(0.3);
 
     .card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include card(xx-large, v.$text-color-2, large, 500);
         padding: 50px;
-        height: 100%;
 
         .card-icon {
             border-radius: 50%;
@@ -88,20 +136,82 @@ section.activity {
                 font-size: 80px;
             }
         }
+    }
+}
 
-        .card-body {
-            .card-title {
-                font-size: xx-large;
-                font-weight: bold;
-            }
+// students
+section#students {
+    @include sectionColor(0.5);
 
-            .card-text {
-                font-size: large;
-                padding: 0 10px;
-                color: v.$text-color-1;
-                font-weight: 500;
-            }
+    .carousel-wrapper {
+        display: flex;
+    }
 
+    .card {
+        width: 95%;
+        margin: auto;
+        @include card(x-large, v.$text-color-2, large, bold);
+    }
+}
+
+// school stars
+section#school-stars {
+    @include sectionColor(0.3);
+
+    .card {
+        @include card(xx-large, v.$text-color-2, x-large, bold);
+
+        a {
+            background-color: v.$text-color-1
         }
     }
+}
+
+// contact us
+section#contact {
+    @include sectionColor(1);
+
+    h1.title {
+        background-color: rgba($color: v.$text-color-1, $alpha: 0.5);
+    }
+
+
+    .row {
+        width: 100%;
+    }
+
+    .info {
+        >div {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            >span {
+                b {
+                    font-size: 20px;
+                }
+
+                svg {
+                    color: v.$text-color-2;
+                    margin-left: 5px;
+                    font-size: 18px;
+                }
+            }
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            >h3 {
+                margin: 10px 0 0;
+                font-size: 19px;
+                font-weight: normal;
+            }
+        }
+    }
+
+    iframe{
+        border-radius: 10px;
+    }
+
 }
