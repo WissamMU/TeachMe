@@ -1,5 +1,6 @@
 @use "./_variable.scss" as v;
 @use './mixins' as *;
+@use './student.scss';
 
 @font-face {
     font-family: "Rubik-Regular";
@@ -24,7 +25,8 @@ h1.title {
 section {
 
     .container,
-    .container-lg {
+    .container-lg,
+    .container-fluid {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -78,13 +80,11 @@ section {
 // home carousel
 .home-carousel {
     margin-top: 65px;
-    ;
 
     .carousel-inner {
         .carousel-item {
-            max-height: 600px;
             object-fit: cover;
-
+            max-height: 600px;
         }
     }
 
@@ -162,7 +162,8 @@ section#school-stars {
         @include card(xx-large, v.$text-color-2, x-large, bold);
 
         a {
-            background-color: v.$text-color-1
+            background-color: v.$text-color-1;
+            border: none;
         }
     }
 }
@@ -174,7 +175,6 @@ section#contact {
     h1.title {
         background-color: rgba($color: v.$text-color-1, $alpha: 0.5);
     }
-
 
     .row {
         width: 100%;
@@ -210,8 +210,78 @@ section#contact {
         }
     }
 
-    iframe{
+    iframe {
         border-radius: 10px;
     }
 
+}
+
+@media (max-width: 992px) {
+
+    // home
+    .home-carousel {
+        .carousel-item {
+            max-height: 430px !important;
+        }
+
+        .card-title {
+            font-size: 2rem !important;
+        }
+
+        .card-text {
+            font-size: 1rem !important;
+        }
+    }
+
+    //activity
+    section#activity {
+        .card {
+            padding: 25px !important;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .home-carousel {
+        .welcome{
+            top: 80%;
+        }
+
+        .carousel-item {
+            max-height: 320px !important;
+        }
+
+        .card-title {
+            font-size: 1.5rem !important;
+        }
+
+        .card-text {
+            font-size: 0.8rem !important;
+        }
+    }
+    section#activity {
+        padding: 20px 50px ;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-carousel {
+        .carousel-item {
+            max-height: 430px !important;
+        }
+
+        .card-title {
+            font-size: 1rem !important;
+        }
+
+        .card-text {
+            font-size: 0.5rem !important;
+        }
+    }
+
+
+    iframe{
+        height: 300px !important;
+    }
 }

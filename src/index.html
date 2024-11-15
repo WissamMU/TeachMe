@@ -10,8 +10,8 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbar">
     <!-- navbar -->
-    <section class="fixed-top">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0" id="navbar">
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-md bg-body-tertiary p-0" id="navbar">
             <div class="container-fluid">
                 <a class="navbar-brand p-0" href="#">
                     <img src="./images/logo-1.png" alt="logo not found" class="m-2 nav-img">
@@ -43,12 +43,11 @@
                 </div>
             </div>
         </nav>
-    </section>
+    </div>
 
     <!-- carousel -->
     <section class="carousel" id="home">
         <div id="carouselExampleIndicators" class="home-carousel carousel-fade carousel slide">
-
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./images/carousel-1.png" class="d-block w-100" alt="...">
@@ -71,10 +70,10 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="welcome">
-                <h1>
+                <h1 class="card-title">
                     أهلًا بك في مدرسة علمني
                 </h1>
-                <p>
+                <p class="card-text">
                     أفضل مدرسة على مستوى القطر متخصصة في تعليم وتأهيل الطلاب بأفضل الطرق والنشاطات، إن كنت تبحث عن مدرسة
                     مميزة لابنك لا تتردد بالتواصل معنا.
                 </p>
@@ -84,10 +83,10 @@
 
     <!-- activity -->
     <section id="activity">
-        <div class="container">
+        <div class="container-lg">
             <h1 class="title mb-5">نشاطاتنا</h1>
             <div class="row">
-                <div class="col-lg-6 mb-5">
+                <div class="col-md-6 mb-5">
                     <div class="card">
                         <div class="card-icon">
                             <i class="fa-solid fa-chalkboard-user"></i>
@@ -104,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-5">
+                <div class="col-md-6 mb-5">
                     <div class="card">
                         <div class="card-icon">
                             <i class="fa-solid fa-bus"></i>
@@ -120,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-5">
+                <div class="col-md-6 mb-5">
                     <div class="card">
                         <div class="card-icon">
                             <i class="fa-solid fa-briefcase-medical"></i>
@@ -137,7 +136,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-5">
+                <div class="col-md-6 mb-5">
                     <div class="card">
                         <div class="card-icon">
                             <i class="fa-solid fa-basketball"></i>
@@ -232,7 +231,7 @@
                                         alt="student-1 img not found">
                                     <div class="card-body">
                                         <h1 class="card-title mb-3">
-                                            يوسف عبد الرحمن محمد
+                                            يوسف احمد محمد
                                         </h1>
                                         <p class="card-text">
                                             2014/05/09
@@ -269,89 +268,6 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
-            <!--
-             <div class="row pb-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="./images/student-1.png" class="card-img-top" alt="student-1 img not found">
-                        <div class="card-body">
-                            <h1 class="card-title mb-3">
-                                احمد محمد حمد
-                            </h1>
-                            <p class="card-text">
-                                2014/02/12
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="./images/student-2.png" class="card-img-top" alt="student-1 img not found">
-                        <div class="card-body">
-                            <h1 class="card-title mb-3">
-                                محمد علي حسن
-                            </h1>
-                            <p class="card-text">
-                                2013/12/12
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="./images/student-6.png" class="card-img-top" alt="student-1 img not found">
-                        <div class="card-body">
-                            <h1 class="card-title mb-3">
-                                فاطمة زينب أحمد
-                            </h1>
-                            <p class="card-text">
-                                2014/07/02
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="./images/student-5.png" class="card-img-top" alt="student-1 img not found">
-                        <div class="card-body">
-                            <h1 class="card-title mb-3">
-                                عمر خالد سعيد
-                            </h1>
-                            <p class="card-text">
-                                2015/01/01
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="./images/student-4.png" class="card-img-top" alt="student-1 img not found">
-                        <div class="card-body">
-                            <h1 class="card-title mb-3">
-                                يوسف عبد الرحمن محمد
-                            </h1>
-                            <p class="card-text">
-                                2014/05/09
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="./images/student-3.png" class="card-img-top" alt="student-1 img not found">
-                        <div class="card-body">
-                            <h1 class="card-title mb-3">
-                                احمد نور الدين
-                            </h1>
-                            <p class="card-text">
-                                2014/08/05
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             -->
         </div>
     </section>
 
@@ -369,7 +285,7 @@
                             <p class="card-text">
                                 المرتبة الاولى
                             </p>
-                            <a href="#" class="btn btn-primary">اذهب الى الملف</a>
+                            <a href="./student-1.html" class="btn btn-primary">اذهب الى الملف</a>
                         </div>
                     </div>
                 </div>
@@ -381,7 +297,7 @@
                                 فاطمة زينب أحمد
                             </h1>
                             <p class="card-text">
-                                المرتبةالثانية
+                                المرتبة الثانية
                             </p>
                             <a href="#" class="btn btn-primary">اذهب الى الملف</a>
                         </div>
@@ -392,10 +308,10 @@
     </section>
 
     <section id="contact">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
-                <div class="col-6">
-                    <div class="info mt-4">
+                <div class="col-sm-6">
+                    <div class="info my-4">
                         <div>
                             <h1 class="title mb-4">تواصل معنا</h1>
                             <span>
@@ -421,7 +337,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4047.9939250553402!2d39.23023759884022!3d21.50667034116076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cf067cba6ebf%3A0x2eff595677cd4a47!2z2YXZhdi02Ykg2K_YsdioINin2YTYrdix2YXZitmG!5e0!3m2!1sen!2ssa!4v1731440059894!5m2!1sen!2ssa"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"

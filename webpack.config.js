@@ -89,11 +89,16 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
-          }),
+        }),
 
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: 'index.html'
-        })
+            filename: 'index.html',
+        }),
+
+        new HtmlWebpackPlugin({
+            template: './src/student-1.html',
+            filename: 'student-1.html',
+        }),
     ],
 };

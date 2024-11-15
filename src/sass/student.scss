@@ -1,0 +1,5 @@
+@use './student-mixin.scss' as *;
+
+#student-1 {
+    @include studentStyle(#E3FDFD,#CBF1F5,#A6E3E9,#A6E3E9);
+}
