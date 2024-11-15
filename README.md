@@ -5,7 +5,7 @@
 ## To get started:
 
 Clone the repository:
-1. git clone https://github.com/your-username/allemani-school.git
+1. git clone https://github.com/WissamMU/TeachMe.git
 
 2. Install dependencies:
 - cd allemani-school
