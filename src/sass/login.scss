@@ -34,9 +34,9 @@ body#login {
     position: absolute;
     top: 0;right:0;bottom:0;left:0;
     background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 500px;
-    background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf884ad570b50659c5fa2dc2cfb20ecf&auto=format&fit=crop&w=1000&q=100');
+    background-position: center;
+    background-size: 600px;
+    background-image: url('https://img.freepik.com/free-vector/access-control-system-abstract-concept_335657-3180.jpg?t=st=1731859501~exp=1731863101~hmac=e043ca958c3f3c3ee147ca84ae4ddfd4760352010cdd95c6928844b4d94eb5ff&w=740');
   }
   
   .signup {
@@ -87,6 +87,7 @@ body#login {
     }
     
     .form-holder {
+        opacity: 0.9 !important;
       border-radius: 15px;
       background-color: #fff;
       overflow: hidden;

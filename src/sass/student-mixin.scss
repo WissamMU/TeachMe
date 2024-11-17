@@ -20,6 +20,21 @@
                 background-color: $main-color;
             }
         }
+
+        .login {
+            .btn {
+
+                color: $text-color-1;
+                font-weight: bold;
+                background-color: $main-color;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: $secondary-color;
+                    color: $text-color-2;
+                }
+            }
+        }
     }
 
     section#student {
@@ -27,15 +42,16 @@
         margin: 80px 50px 50px 50px;
         border-radius: 10px;
         text-align: right;
-        
+
+
         .student-img {
             border-radius: 10px;
             width: 100%;
         }
-        
+
         .about {
             padding-right: 50px;
-                        
+
             h1 {
                 margin: auto 0 20px;
                 text-align: center;
@@ -63,7 +79,7 @@
 
         .grades-table {
             border-radius: 10px;
-            margin:0 auto 20px auto;
+            margin: 0 auto 20px auto;
             font-size: 16px;
             overflow: hidden;
             border-collapse: collapse;
@@ -103,8 +119,9 @@
             border-radius: 10px;
         }
 
-        .container{
-            max-width:90%;
+        .container {
+            max-width: 90%;
+
             .row {
                 width: 100%;
             }
@@ -187,6 +204,25 @@
                     }
                 }
             }
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        section#student {
+            padding-top: 10px;
+
+            .about {
+                h1 {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        section#student {
+            margin: 65px 0 0;
         }
     }
 }

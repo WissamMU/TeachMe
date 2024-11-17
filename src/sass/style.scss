@@ -54,9 +54,11 @@ section {
         font-size: 30px;
         font-weight: bold;
     }
-    .collapse{
+
+    .collapse {
         justify-content: space-between;
     }
+
     .nav-item {
         a {
             color: v.$text-color-1;
@@ -74,19 +76,21 @@ section {
             background-color: v.$secondary-color;
         }
     }
-    .login{
-        .btn{
+
+    .login {
+        .btn {
 
             color: v.$text-color-1;
             font-weight: bold;
             background-color: v.$main-color;
             border-radius: 10px;
+
             &:hover {
                 background-color: v.$secondary-color;
                 color: v.$text-color-2;
             }
         }
-        }
+    }
 }
 
 .noTransparent {
@@ -161,12 +165,33 @@ section#students {
 
     .carousel-wrapper {
         display: flex;
+
+        .card {
+            margin: 0;
+            width: calc(100%/3);
+            height: auto !important;
+            @include card(x-large, v.$text-color-2, large, bold);
+        }
     }
 
-    .card {
-        width: 95%;
-        margin: auto;
-        @include card(x-large, v.$text-color-2, large, bold);
+    .img-wrapper {
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        background-color: #e1e1e1;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
@@ -233,11 +258,12 @@ section#contact {
 }
 
 @media (max-width: 992px) {
-    .navbar{
-        .nav-link{
+    .navbar {
+        .nav-link {
             font-size: 16px;
         }
     }
+
     // home
     .home-carousel {
         .carousel-item {
@@ -263,13 +289,14 @@ section#contact {
 }
 
 @media (max-width: 768px) {
-    .navbar{
+    .navbar {
         .login {
             margin-bottom: 10px;
         }
     }
+
     .home-carousel {
-        .welcome{
+        .welcome {
             top: 80%;
         }
 
@@ -285,30 +312,63 @@ section#contact {
             font-size: 0.8rem !important;
         }
     }
+
     section#activity {
-        padding: 20px 50px ;
+        padding: 20px 50px;
     }
 }
 
 @media (max-width: 576px) {
     .home-carousel {
         .carousel-item {
-            max-height: 430px !important;
+            max-height: 225px !important;
         }
+        .welcome{
+            top:50%;
+            background-color: rgba($color: v.$main-color, $alpha: 0.5);
 
-        // .card-title {
-        //     font-size: 1rem !important;
-        // }
-
-        // .card-text {
-        //     font-size: 0.5rem !important;
-        // }
+        }
     }
 
+    section#activity {
+        padding: 20px 0;
+    }
 
-    iframe{
+    .carousel-item {
+
+        .card {
+            width: 100% !important;
+
+            .img-wrapper {
+                height: auto;
+            }
+        }
+    }
+
+    section#school-stars {
+        .card {
+            .card-title {
+                font-size: x-large;
+            }
+
+            .card-text {
+                font-size: medium;
+            }
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section#contact .info > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    iframe {
         height: 300px !important;
     }
 }
-
-
