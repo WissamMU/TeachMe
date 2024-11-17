@@ -100,5 +100,14 @@ module.exports = {
             template: './src/student-1.html',
             filename: 'student-1.html',
         }),
+
+        new HtmlWebpackPlugin({
+            template: './src/student-2.html',
+            filename: 'student-2.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/login.html',
+            filename: 'login.html',
+        }),
     ],
 };

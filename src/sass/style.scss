@@ -1,6 +1,7 @@
 @use "./_variable.scss" as v;
 @use './mixins' as *;
 @use './student.scss';
+@use './login.scss';
 
 @font-face {
     font-family: "Rubik-Regular";
@@ -53,7 +54,9 @@ section {
         font-size: 30px;
         font-weight: bold;
     }
-
+    .collapse{
+        justify-content: space-between;
+    }
     .nav-item {
         a {
             color: v.$text-color-1;
@@ -71,6 +74,19 @@ section {
             background-color: v.$secondary-color;
         }
     }
+    .login{
+        .btn{
+
+            color: v.$text-color-1;
+            font-weight: bold;
+            background-color: v.$main-color;
+            border-radius: 10px;
+            &:hover {
+                background-color: v.$secondary-color;
+                color: v.$text-color-2;
+            }
+        }
+        }
 }
 
 .noTransparent {
@@ -217,7 +233,11 @@ section#contact {
 }
 
 @media (max-width: 992px) {
-
+    .navbar{
+        .nav-link{
+            font-size: 16px;
+        }
+    }
     // home
     .home-carousel {
         .carousel-item {
@@ -243,6 +263,11 @@ section#contact {
 }
 
 @media (max-width: 768px) {
+    .navbar{
+        .login {
+            margin-bottom: 10px;
+        }
+    }
     .home-carousel {
         .welcome{
             top: 80%;
@@ -271,13 +296,13 @@ section#contact {
             max-height: 430px !important;
         }
 
-        .card-title {
-            font-size: 1rem !important;
-        }
+        // .card-title {
+        //     font-size: 1rem !important;
+        // }
 
-        .card-text {
-            font-size: 0.5rem !important;
-        }
+        // .card-text {
+        //     font-size: 0.5rem !important;
+        // }
     }
 
 
@@ -285,3 +310,5 @@ section#contact {
         height: 300px !important;
     }
 }
+
+
