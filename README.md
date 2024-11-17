@@ -9,8 +9,9 @@ Clone the repository:
 1. git clone https://github.com/WissamMU/TeachMe.git
 
 2. Install dependencies:
-- cd allemani-school
+- cd toThisFile
 - npm install
 
 3. Start the development server:
-- npm start
+- npm run build
+- or you can vist here for final page https://wissammu.github.io/TeachMe/
